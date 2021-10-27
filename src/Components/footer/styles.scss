@@ -1,0 +1,17 @@
+@import '../../assets/globalStyles/styles.scss';
+
+footer{
+    background-color: $toroto-blue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 200px;
+    height: 112px;
+    .social-networks{
+        .social-page{
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+   
+}

@@ -1,0 +1,58 @@
+@import '../../assets/globalStyles/styles.scss';
+
+.toroto-map{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    
+   
+}
+
+.toroto-header{
+
+    width: 16rem;
+    margin-top: 10rem;
+    margin-left: 5rem;
+    display: flex;
+    flex-direction: column;
+    color: $toroto-black;
+    button{
+        border-radius: 5px;
+        border: none;
+        background-color:$toroto-black;
+        color: white;
+        font-size: small;
+        padding: .5rem .5rem;
+
+    }
+}
+
+.marker-btn{
+    border-radius: 100%;
+    border: none;
+    width: 30px;
+    height: 30px;
+    background-color: $toroto-black;
+}
+ 
+.popup-project{
+    max-width:  18rem;
+    overflow: visible;
+  
+    .place-card{
+        border-radius: 10px;
+        overflow: hidden;
+        .card-img-top{
+            height: 85px;
+            object-fit: cover;
+            object-position: center;
+           
+        }
+
+    }
+   
+}
+
+   

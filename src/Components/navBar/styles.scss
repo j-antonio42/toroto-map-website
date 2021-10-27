@@ -1,0 +1,37 @@
+@import '../../assets/globalStyles/styles.scss';
+
+.toroto-nav{
+    background-color: $toroto-blue;
+    position: fixed;
+    height: 56px;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 99;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .navbar-brand{
+        color: white;
+    }
+    .nav-links-ul{
+        .nav-link{
+            color: white;
+            display: flex;
+            align-items: center;
+            font-size: small;
+
+        }
+        .link-logo{
+            margin-right: 3px;
+            margin-bottom: 2px;
+        }
+        button{
+            background-color: white;
+            color: $toroto-blue;
+            border-radius: 10px;
+            font-size: small;
+            height: 32px;
+        }
+    }
+}
