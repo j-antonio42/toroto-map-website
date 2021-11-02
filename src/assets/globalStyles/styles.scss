@@ -27,3 +27,19 @@ $colors:(
         background-color: $color;
     }
 }
+
+.container{
+    margin-top: 70px ;
+    margin-bottom: 20px;
+    padding-right: 6rem;
+    padding-left: 6rem;
+}
+
+@media(max-width:576px){
+    .container{
+        margin-top: 56px ;
+        margin-bottom: 0px;
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+}

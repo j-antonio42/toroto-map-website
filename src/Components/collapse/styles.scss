@@ -1,0 +1,27 @@
+@import '../../assets/globalStyles/styles.scss';
+
+.collapse-div{
+    border-top: solid 1px $toroto-black;
+    .activity-title{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+        h5{
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+        img{
+            height: 1.5rem;
+        }
+        .toggle-arrow{
+            height: 1.5rem;
+            transform: rotate(180deg);
+        }
+    }
+
+    
+    
+
+}

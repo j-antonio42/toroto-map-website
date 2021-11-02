@@ -1,0 +1,123 @@
+@import '../../assets/globalStyles/styles.scss';
+
+  .imgs-container{
+    min-width: 33%;
+    margin-bottom: 1.5rem;
+   
+    .detail-images{
+        width: 100%;
+        height: 288px;
+        border-radius: 20px;
+        object-fit: cover;
+        object-position: center;
+        
+    }
+}
+
+.modal-data{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  .modal-image{
+    height: 55vh;
+    width: 70vh;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+    margin-top: 1rem;
+  }
+  .modal-text{
+    margin-top: 1rem;
+    width: 87%;
+  }
+
+}
+
+
+.modal-container.card{
+  padding: 0px;
+  width: 90vw ;
+  height: 90vh;
+  .modal-close.card{
+    
+    background-color: transparent;
+    z-index: 888;
+  }
+  .place-card{
+    border-radius: 10px;
+    height: 100%;
+    overflow: hidden;
+    .card-img-top{
+        height: 30%;
+        object-fit: cover;
+        object-position: center;
+       
+    }
+    .modal-body{
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        margin-left: 32px;
+        margin-right: 32px;
+        justify-content: space-between;
+        .batch-modal{
+          display: flex;
+          align-items: center;
+          img{
+            height: 25px;
+            margin-bottom: .5rem;
+          }
+        }
+        .modal-title{
+            font-size: 14px;
+            margin-bottom: 1rem;
+        }
+        .modal-p-text{
+            font-size: 20px;
+            font-weight: 500;
+        }
+        li{
+          font-size: 16px;
+        }
+
+        .propose-btns{
+          display: flex;
+          font-size: 14px;
+          .propose-btn{
+            border-radius: 5px;
+            background-color:$toroto-black;
+            border: solid 2px $toroto-black;
+            color: white;
+            width: 100%;
+            padding: .5rem .5rem;
+            margin-bottom: 1rem;
+    
+            &:hover{
+              background-color: white;
+              color: $toroto-black;
+            }
+
+          }
+          .see-btn{
+            border-radius: 5px;
+            border: none;
+            background-color:white;
+            color: $toroto-black;
+            width: 100%;
+            padding: .5rem .5rem;
+            margin-bottom: 1rem;
+            
+          }
+        }
+    }
+
+  
+  }
+
+}
+
+
+
+
+

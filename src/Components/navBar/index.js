@@ -12,6 +12,7 @@ import {
 import './styles.scss'
 import logo from '../../assets/img/icons/logo.svg'
 import {FiExternalLink} from 'react-icons/fi'
+import {GiHamburgerMenu} from 'react-icons/gi'
 
 
 const TorotoNav = () => {
@@ -20,23 +21,24 @@ const TorotoNav = () => {
   return (
     <div>
       <Navbar className='toroto-nav' expand="md">
+        <GiHamburgerMenu className='d-block d-sm-none menu'/>
         <NavbarBrand href="/"><img src={ logo } alt=""/></NavbarBrand>
     
           <Nav className="nav-links-ul" navbar>
             <NavItem >
-              <Link className='nav-link'>PROYECTOS</Link>
+              <Link className='nav-link d-none d-sm-block'>PROYECTOS</Link>
             </NavItem>
             <NavItem >
-              <Link className='nav-link'>SOBRE TOROTO</Link>
+              <Link className='nav-link d-none d-sm-block'>SOBRE TOROTO</Link>
             </NavItem>
             <NavItem >
-              <Link className='nav-link'>BLOG</Link>
+              <Link className='nav-link d-none d-sm-block' >BLOG</Link>
             </NavItem>
             <NavItem >
-              <Link className='nav-link'>
-              <FiExternalLink className='link-logo'/>META REGISTRO</Link>
+              <Link className='nav-link d-none d-sm-block'>
+              <FiExternalLink className='link-logo '/>META REGISTRO</Link>
             </NavItem>
-            <Button>CONTACTO</Button>
+            <Button className='d-none d-sm-block'>CONTACTO</Button>
             
           </Nav>
           

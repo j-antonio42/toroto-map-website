@@ -1,6 +1,61 @@
 @import '../../assets/globalStyles/styles.scss';
 
-.container{
-    margin-top: 56px ;
-    margin-bottom: 20px;
+.title-header{
+    color: $toroto-black;
+    margin-bottom: 1rem;
+}
+
+
+@media(max-width:576px){
+
+    .imgMobile{
+        position: relative;
+        z-index: -1;
+        object-fit: cover;
+        object-position: center;
+        width: 100vw;
+        height: 50vh;
+        margin-left: -16px;
+        margin-right: -16px;
+    }
+
+
+    .mobile-div{
+        margin-top: -3rem;
+        margin-left: -16px;
+        margin-right: -16px;
+        border-radius: 20px;
+        width: 100vw;
+        background-color: white;
+        text-align: center; 
+        flex-direction: column;
+        justify-content: center;
+        height: 50vh;
+        padding: 16px;
+        margin-bottom: 1rem;
+        h1{
+            margin-bottom: 1rem;
+        }
+        button{
+            border-radius: 5px;
+            border: none;
+            background-color:$toroto-black;
+            border: solid 2px $toroto-black;
+            color: white;
+            padding: .5rem .5rem;
+            margin-bottom: 2rem;
+            &:hover{
+                background-color: white;
+                color: $toroto-black;
+            }
+        
+            }
+            .arrow-mobile{
+                height: 45px;
+            }
+        }
+
+
+  
+    
 }

@@ -1,0 +1,23 @@
+@import '../../assets/globalStyles/styles.scss';
+
+.project-batch{
+    display: flex;
+    justify-content: space-between;
+    padding: 1px;
+   
+    .batch{
+        border: solid 2px gray;
+        border-radius: 20px;
+        padding: .3rem .6rem .3rem .6rem;
+        margin: .3rem;
+        width: 100%;
+        height: 3rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        .batch-text{
+            font-size: small;
+        }
+    }
+}
+

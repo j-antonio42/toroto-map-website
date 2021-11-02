@@ -35,3 +35,24 @@
         }
     }
 }
+
+@media(max-width:576px){
+    .toroto-nav{
+        width: 100vw;
+        .menu{
+            color: white;
+            font-size: 1.7rem;
+            position: fixed;
+            left: 1rem;
+        
+        }
+
+        .navbar-brand{
+            position: fixed;
+            top: 0;
+            padding-top: 0;
+        }
+       
+    
+    }
+}

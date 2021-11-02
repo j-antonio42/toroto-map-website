@@ -1,6 +1,6 @@
 import React,{ useState } from 'react';
 import ReactMapGL, {Marker, Popup} from 'react-map-gl';
-import ProyectCard from '../projectCard';
+import arrowDown from '../../assets/img/icons/chevron-down.svg'
 import './styles.scss';
 
 function BigMap(props) {
@@ -14,7 +14,6 @@ function BigMap(props) {
   });
 
   const [ hoveredPlace, setHoveredPlace ] = useState(null)
-  const [ placeInfo, setPlaceInfo ] = useState({})
   const projectInfo = props.projectData ? props.projectData : []
 
   const points = projectInfo.map( place => ({
@@ -28,9 +27,9 @@ function BigMap(props) {
     images: place.images 
   }))
 
-
-console.log(hoveredPlace)
-
+  const moveToProyects = () => {
+    window.scrollBy(0, window.innerHeight);
+  }
 
   return (
     
@@ -66,18 +65,26 @@ console.log(hoveredPlace)
          longitude={hoveredPlace.coordinates[0][0]}
          >
            <div className='card place-card' >
-           <img className="card-img-top" src={hoveredPlace.images[2]} alt="some place"/>
-          <h6 className="card-title">{hoveredPlace.location}</h6>
-            <h5 className="card-title">{hoveredPlace.name}</h5>
-            <p className="card-text">{`${hoveredPlace.description.slice(0,100)}...`}</p>
+              <img className="card-img-top" src={hoveredPlace.images[2]} alt="some place"/>
+              <div className='place-body'>
+                <h6 className="card-title">{hoveredPlace.location}</h6>
+                  <h5 className="card-title">{hoveredPlace.name}</h5>
+                  <p className="project-text">{`${hoveredPlace.description.slice(0,100)}...`}</p>
+              </div>
            </div>
          </Popup>
           ) } 
           <div className='toroto-header'>
-          <h1>Somos desarrolladores de proyectos</h1>
-          <p>Lorem ipsum es el texto que se usa habitualmente en diseño gráfico en demostraciones de tipografías</p>
-          <button>PROPONER UN PROYECTO</button>
-
+            <h1>Somos desarrolladores de proyectos</h1>
+            <p>Lorem ipsum es el texto que se usa habitualmente en diseño gráfico en demostraciones de tipografías</p>
+            <button>PROPONER UN PROYECTO</button>
+          </div>
+          <div className='see-projects'>
+            <h6 className='font-weight-bold'>VER LISTA COMPLETA DE PROYECTOS</h6>
+     
+            <img src={arrowDown} onClick={moveToProyects}  className='arrow-desktop' alt='desktop img'/>
+           
+            
           </div>
     </ReactMapGL>
     

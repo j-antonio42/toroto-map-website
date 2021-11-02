@@ -1,0 +1,263 @@
+@import '../../assets/globalStyles/styles.scss';
+
+
+.detail-card{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    .detail-img{
+        width: 50%;
+        object-position: center;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+    .detail-body{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        .detail-header{
+            margin-bottom: 0.5rem;
+        }
+        .service-detail{
+            margin-bottom: .5rem;
+        }
+    }
+}
+
+.problematic{
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    padding: 16px;
+    h5{
+        font-weight: bold;
+        color: $toroto-black;
+    }
+    p{
+        
+        font-weight: lighter;
+        color: $toroto-black;
+    }
+}
+
+.implementation{
+    padding: 16px;
+    color: $toroto-black;
+    margin-bottom: 3rem;
+    h2{
+       margin-bottom: 3rem;
+        .question{
+            height: 1.3rem;
+            margin-left: .5rem;
+        }
+        
+    }
+    
+}
+
+.map-div{
+    padding: 16px;
+    .detail-map{
+        overflow: hidden;
+        border-radius: 20px;
+    }
+}
+
+.gallery-container{
+    padding: 16px;
+    .row-img{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      
+
+    }
+}
+
+.impact-container{
+    padding: 16px;
+    .impact-data{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: .5rem;
+        
+        .impact-div{
+            width: 20%;
+            height: 117px;
+            text-align: center;
+            border-radius: 10px;
+            background-color: $toroto-gray;
+            margin-top: 2rem;
+            h1{
+                color: $toroto-blue;
+                margin-top: -2.3rem;
+                font-size: 65px;
+                font-weight: bold;
+            }
+            h4{
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+.intro-div{
+    padding: 16px;
+    text-align: center; 
+    flex-direction: column;
+    margin-top: 3rem;
+    button{
+        border-radius: 5px;
+        border: none;
+        background-color:$toroto-black;
+        border: solid 2px $toroto-black;
+        color: white;
+        width: 100%;
+        padding: .5rem .5rem;
+        margin-bottom: 2rem;
+        &:hover{
+            background-color: white;
+            color: $toroto-black;
+        }
+    }
+}
+
+@media(max-width:576px){
+
+    .mobile-detail{
+        position: relative;
+        z-index: -1;
+        object-fit: cover;
+        object-position: center;
+        width: 100vw;
+        height: 42vh;
+        margin-left: -16px;
+        margin-right: -16px;
+    }
+
+    .detail-card{
+       
+        margin-top: -3rem;
+        margin-left: -16px;
+        margin-right: -16px;
+        border-radius: 20px;
+        width: 100vw;
+        background-color: white;
+        padding: 16px;
+   
+        .detail-body{
+            margin-top: 1rem;
+            h1{
+                margin-bottom: 0px;
+            }
+            .batch-text{
+                font-size: 10px;
+            }
+        }  
+    }
+
+    .implementation{
+        
+        .modal-container.card{
+           
+            .modal-close.card{
+              right: 0px;
+              font-size: 13px;
+            }
+            .place-card .modal-body {
+                width: 360px;
+                height: 586px;
+                .batch-modal{
+                    margin-top: 30px;
+                  
+                    .card-title{
+                        font-size: 20px;
+                        margin-left: .5rem;
+                    }
+                }
+                .modal-title{
+                    margin-bottom: 0;
+                }
+                .modal-p-text{
+                    margin-bottom: 0;
+                }
+
+                ul{
+                    li{
+                        font-size: 14px;
+                    }
+                }
+                .propose-btns{
+                    flex-direction: column;
+                }
+            }   
+        }
+    }
+
+
+
+    .gallery-container{
+        .row-img{
+            .imgs-container{
+                padding-left: 4px;
+                padding-right: 4px;
+                margin-bottom: 15px;
+                img{
+                    height: 110px;
+                }
+            }
+            .modal{
+                padding-left: 0;
+                .modal-container{
+                    min-width: 350px;
+                    max-width: 350px;
+                    min-height: 480px;
+                    max-height: 480px;
+                   
+                    .modal-data{
+                        .modal-image{
+                            width: 264px;
+                            height: 200px;
+                        }
+                        .modal-text{
+                            font-size: 14px;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+    .impact-container{
+        
+        .impact-data{
+        
+            .impact-div{
+                width: 47%;
+                height: 65px;
+                margin-bottom: 2rem;
+                padding-right: 4px;
+                padding-left: 4px;
+                h1{
+                    font-size: 50px;
+                    margin-top: -2rem;
+                    margin-bottom: 0;
+                }
+                h4{
+                    font-size: 14px;
+                }
+
+            }
+        }
+    }
+
+    .intro-div{
+        margin-top: 0;
+    }
+    
+
+
+    
+}

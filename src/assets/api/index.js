@@ -13,7 +13,13 @@ export default{
     },
 
     async getProjectById(id){
-        let result = await fetch(`${URL}/${id}`)
+        let result = await fetch(`${URL}/${id}`,{ 
+            method: 'GET',
+            headers: {
+                'Content-Type':'application/json'  
+            },
+            mode: 'cors',
+          })
         return await result.json()
     }
 }
