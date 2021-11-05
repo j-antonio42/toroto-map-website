@@ -9,6 +9,8 @@ import './styles.scss'
 import CollapseActivities from '../../Components/collapse';
 import MapDetail from '../../Components/detailMap';
 import ModalImages from '../../Components/modalImages';
+import TorotoSpinner from '../../Components/spinner';
+import ModalGallery from '../../Components/modalGallery';
 
 
 const ProjectDetail = () => {
@@ -89,13 +91,18 @@ const ProjectDetail = () => {
             
             <h4 className='mb-4'>Galería de imágenes</h4>
             <Row className='row-img'>
-            {
+          {/*  <ModalGallery
+              imgArray={images}
+              problem={problem}
+          />  */}
+            { 
                images.map((item, index) => {
                     return (
                         <ModalImages
-                        key={index}
+                        modalKey={index}
                         image ={ item}
                         problem= {problem}
+                        imgArray={images}
                        />
                     )
                 }) 
@@ -105,6 +112,7 @@ const ProjectDetail = () => {
         <div className='impact-container'>
             <h4 className='mb-4'>Impacto</h4>
             <Row className='impact-data'>
+               
                 {
                    impact.map((item, index) => {
                        return (
@@ -135,6 +143,10 @@ const ProjectDetail = () => {
     return (
         <div className='container-fluid'>
             <div className='container'>
+
+            {
+               !dataDetail && <TorotoSpinner/>
+            }
             {  
               Object.values(dataDetail).length > 0 &&
                createTemplate(dataDetail[0])

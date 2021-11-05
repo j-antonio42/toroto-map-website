@@ -2,12 +2,13 @@ import React from 'react';
 import './styles.scss'
 
 
-const Modal = ({children, isOpen, closeModal}) => {
+const Modal = ({children, isOpen, closeModal, indexImg}) => {
 
    const handleModal = (event) => {
        event.stopPropagation()
    }
-
+   
+ 
 
     return (
      <div className={`modal ${isOpen && 'is-open'}`} onClick={closeModal}>

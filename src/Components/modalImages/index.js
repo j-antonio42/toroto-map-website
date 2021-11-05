@@ -3,24 +3,26 @@ import Modal from '../../Components/modal'
 import {Col} from 'reactstrap'
 import {BsFillQuestionCircleFill} from 'react-icons/bs'
 import serviceLogo from '../../assets/img/icons/service_icon.svg'
+import TorotoCarousel from '../carousel';
 import './styles.scss'
 
 
-const ModalImages = ({image, problem, cover, textCover}) => {
+const ModalImages = ({image, problem, cover, textCover, imgArray, modalKey}) => {
 
     const[isOpen, setIsOpen]= useState(false)
 
     const openModal = () => {
-        setIsOpen(true)
+        setIsOpen(true)  
     }
-
+    
     const closeModal = () => {
         setIsOpen(false)
     }
 
+
     return (
         <>
-           { image ? <Col xs='4' md='4' 
+           { image ? <Col xs='4' md='4' key={modalKey}
                 className='imgs-container'>
                 <img 
                 onClick={openModal}
@@ -37,19 +39,30 @@ const ModalImages = ({image, problem, cover, textCover}) => {
             <Modal 
               isOpen={isOpen}
               closeModal={closeModal}
+             
               > 
              
              {  
               image ? 
-                <div className='modal-data'> 
+               
+                <TorotoCarousel  modalKey={modalKey}>
+                    { imgArray.map( (slide, index) => {
+
+                    return ( 
+                        <div className='modal-data' key={index}> 
                     <img 
                     className='modal-image' 
-                    src={image}
+                    src={ slide  }
                     />
                     <p
                     className='modal-text'
                     >{problem.slice(0, 150)}.</p>
-                </div> : 
+                     </div>
+
+                    )
+                })}
+                </TorotoCarousel>
+             : 
 
                 <div className='card place-card' >
                     <img className="card-img-top d-none d-sm-block" src={cover} alt="some place"/>

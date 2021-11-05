@@ -67,7 +67,7 @@ function BigMap(props) {
            <div className='card place-card' >
               <img className="card-img-top" src={hoveredPlace.images[2]} alt="some place"/>
               <div className='place-body'>
-                <h6 className="card-title">{hoveredPlace.location}</h6>
+                <h6 className="card-title">{hoveredPlace.location.slice(0,52)}</h6>
                   <h5 className="card-title">{hoveredPlace.name}</h5>
                   <p className="project-text">{`${hoveredPlace.description.slice(0,100)}...`}</p>
               </div>

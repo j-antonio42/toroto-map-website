@@ -1,0 +1,32 @@
+@import '../../assets/globalStyles/styles.scss';
+
+.rec.rec-arrow {
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+    color: $toroto-black;
+   
+    &:hover{
+        border: none;
+        background-color: transparent;
+        box-shadow: none;
+        color: $toroto-blue ;
+    }
+    &:active{
+        border: none;
+        background-color: transparent;
+        box-shadow: none;
+        color: $toroto-blue 
+    }
+    &:focus-within:enabled{
+        color: $toroto-blue;
+        box-shadow: none;
+        border: none;
+    }
+    .jRFJkP:hover:enabled, .jRFJkP:focus:enabled {
+        color: $toroto-blue;
+        background-color: transparent;
+        box-shadow: none;
+        border: none;
+    }
+}
